@@ -1,15 +1,96 @@
 {
-  "store.home": { 
+  "store.home": {
     "blocks": [
-      "rich-text"
+      "slider-layout#text-test", "flex-layout.row"
     ]
   },
-  "rich-text": { 
-    "props": { 
-      "text": "VTEX Store Framework",
-      "textAlignment": "CENTER",
-      "textPosition": "CENTER",
-      "font": "t-heading-1"
+
+  "slider-layout#text-test": {
+    "props": {
+      "itemsPerPage": {
+        "desktop": 1,
+        "tablet": 1,
+        "phone": 1
+      },
+      "infinite": true,
+      "showNavigationArrows": "desktopOnly",
+      "blockClass": "carousel"
+    },
+    "children": ["image#img1", "image#img2"]
+  },
+
+  "image#img1": {
+    "props": {
+      "src": "https://maratonavirtual.s3.sa-east-1.amazonaws.com/6iibxhv7jzzdn2749uhoxub2fdjf?response-content-disposition=inline%3B%20filename%3D%22BANNER-WOOD.png%22%3B%20filename%2A%3DUTF-8%27%27BANNER-WOOD.png&response-content-type=image%2Fpng&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIRHGNFPZAGTZ7SUA%2F20210822%2Fsa-east-1%2Fs3%2Faws4_request&X-Amz-Date=20210822T030646Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=fb12870f78905305d2f013de7ddf1b4390a1ebc5f4b04ddadf3fe68ce187b8ec",
+      "maxHeight": 295
+    }
+  },
+  "image#img2": {
+    "props": {
+      "src": "https://maratonavirtual.s3.sa-east-1.amazonaws.com/du3k6akoks0u3xe322aypnaaal8e?response-content-disposition=inline%3B%20filename%3D%22W6S9NXIJ40I86DJI17S40123EYNM3J6CNF24M4Y04GGC9TBSXU.png%22%3B%20filename%2A%3DUTF-8%27%27W6S9NXIJ40I86DJI17S40123EYNM3J6CNF24M4Y04GGC9TBSXU.png&response-content-type=image%2Fpng&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIRHGNFPZAGTZ7SUA%2F20210822%2Fsa-east-1%2Fs3%2Faws4_request&X-Amz-Date=20210822T030832Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=2dc832c7f9546e2bd98daccbdb1e9243bd8d5f30fd815b8c9e32155216507495",
+      "maxHeight": 295
+    }
+  },
+  
+  "flex-layout.row" :{
+    "children": [
+      "search-result-layout.customQuery#home"
+    ]
+  },
+  
+  "search-result-layout.customQuery#home": {
+    "props": {
+      "querySchema": {
+        "skusFilter": "FIRST_AVAILABLE",
+        "simulationBehavior": "skip"
+      }
+    },
+    "blocks": ["search-result-layout.desktop#lp"]
+  },
+  "search-result-layout.desktop#lp": {
+    "children": [
+      "search-content#lp"
+    ],
+    "props": {
+      "preventRouteChange": true
+    }
+  },  
+  "search-content#lp":{
+    "blocks":[
+      "gallery#lp", "not-found"
+    ]
+  },
+      "gallery#lp": {
+      "props": {
+        "layouts": [
+          {
+            "name": "grid",
+            "component": "GridSummary",
+            "itemsPerRow": {
+              "(min-width:1300px)": 2,
+              "desktop": 2,
+              "tablet": 2,
+              "phone": 1
+            }
+          },
+          {
+            "name": "list",
+            "component": "ListSummary",
+            "itemsPerRow": 1
+          }
+        ],
+        "ListSummary": "product-summary.shelf#lp",
+        "GridSummary": "product-summary.shelf#lp"
+      }
+    },
+    "product-summary.shelf#lp": {
+      "children": [
+        "product-summary-name",
+        //"product-summary-description",
+        "product-summary-image",
+        "product-summary-price",
+        //"product-summary-sku-selector",
+        "product-summary-buy-button"
+      ]
     }
   }
-}
