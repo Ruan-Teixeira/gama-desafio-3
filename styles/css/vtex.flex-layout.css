@@ -1,3 +1,12 @@
+/* deixa a cor do layout e laterais em preto */
 .flexRow{
+    background: black;  
+}
+/* deixa a cor do layout mobile em preto */
+.flexRowContent{
     background: black;
 }
+/* aumenta a largura da barra de pesquisa */
+  :global(.vtex-store-components-3-x-searchBarContainer) {
+    width: 50vw;
+  }

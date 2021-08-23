@@ -1,0 +1,5 @@
+/* deixa a cor do minicart, abaixo do tituloi em preto */
+.minicartProductListContainer{
+    border:1px;
+    background: black;
+}

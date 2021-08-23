@@ -1,4 +1,5 @@
 {
+  // define configurações e blocos para exibição dos produdos da página inicial
   "store.home": {
     "blocks": [
       "slider-layout#text-test", "flex-layout.row"
@@ -13,6 +14,10 @@
         "phone": 1
       },
       "infinite": true,
+      "autoplay": {
+        "timeout": 5000,
+        "stopOnHover": true
+      },
       "showNavigationArrows": "desktopOnly",
       "blockClass": "carousel"
     },
@@ -27,7 +32,7 @@
   },
   "image#img2": {
     "props": {
-      "src": "https://maratonavirtual.s3.sa-east-1.amazonaws.com/du3k6akoks0u3xe322aypnaaal8e?response-content-disposition=inline%3B%20filename%3D%22W6S9NXIJ40I86DJI17S40123EYNM3J6CNF24M4Y04GGC9TBSXU.png%22%3B%20filename%2A%3DUTF-8%27%27W6S9NXIJ40I86DJI17S40123EYNM3J6CNF24M4Y04GGC9TBSXU.png&response-content-type=image%2Fpng&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIRHGNFPZAGTZ7SUA%2F20210822%2Fsa-east-1%2Fs3%2Faws4_request&X-Amz-Date=20210822T030832Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=2dc832c7f9546e2bd98daccbdb1e9243bd8d5f30fd815b8c9e32155216507495",
+      "src": "https://maratonavirtual.s3.sa-east-1.amazonaws.com/du3k6akoks0u3xe322aypnaaal8e?response-content-disposition=inline%3B%20filename%3D%22W6S9NXIJ40I86DJI17S40123EYNM3J6CNF24M4Y04GGC9TBSXU.png%22%3B%20filename%2A%3DUTF-8%27%27W6S9NXIJ40I86DJI17S40123EYNM3J6CNF24M4Y04GGC9TBSXU.png&response-content-type=image%2Fpng&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIRHGNFPZAGTZ7SUA%2F20210822%2Fsa-east-1%2Fs3%2Faws4_request&X-Amz-Date=20210822T190009Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=346146e1ee8687492419d17b27b166a03e79d08742091c30ba0f63e21917b91c",
       "maxHeight": 295
     }
   },
@@ -73,14 +78,17 @@
               "phone": 1
             }
           },
+          
           {
             "name": "list",
             "component": "ListSummary",
             "itemsPerRow": 1
+            
           }
         ],
         "ListSummary": "product-summary.shelf#lp",
         "GridSummary": "product-summary.shelf#lp"
+       
       }
     },
     "product-summary.shelf#lp": {
@@ -90,7 +98,8 @@
         "product-summary-image",
         "product-summary-price",
         //"product-summary-sku-selector",
-        "product-summary-buy-button"
+        //"product-summary-buy-button"
+        "add-to-cart-button"
       ]
     }
   }

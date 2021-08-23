@@ -1,26 +1,102 @@
 {
+  // configurações do rodape
   "footer": {
-    "blocks": ["footer-layout.desktop", "footer-layout.mobile"]
-  },
-  "footer-layout.desktop": { 
-    "children": [
-      "flex-layout.row#footer"
+    "blocks": [
+      "footer-layout.desktop",
+      "footer-layout.mobile"
     ]
   },
-  "footer-layout.mobile": { 
+  "footer-layout.desktop": {
     "children": [
-      "flex-layout.row#footer"
+      "sticky-layout#footer"
     ]
   },
-  "flex-layout.row#footer": { 
+  "footer-layout.mobile": {
     "children": [
-      "image"
+      "sticky-layout#footer"
     ]
   },
-  "image": {
+  "sticky-layout#footer": {
     "props": {
-      "width": 100,
-      "src": "https://brand.vtex.com/static/media/VTEX_pink_RGB.751a9fb5.svg"
+      "position": "bottom",
+      "blockClass": "footer"
+    },
+    "children": [
+      "flex-layout.row#footer"
+    ]
+  },
+  "flex-layout.row#footer": {
+    "props": {
+      "horizontalAlign": "center",
+      "verticalAlign": "center",
+      "preventHorizontalStretch": true,
+      "preventVerticalStretch": true
+    },
+    "children": [
+      "vtex.menu@2.x:menu#footer"
+    ]
+  },
+  "vtex.menu@2.x:menu#footer": {
+    "props": {
+      "items": [
+        {
+          "id": "menu-footer-login",
+          "type": "custom",
+          "iconId": "hpa-login",
+          "itemProps": {
+            "text": "Login",
+            "type": "internal"
+          },
+          "iconProps": {
+            "id": "hpa-login",
+            "size": 24,
+            "viewBox": "0 0 24 24",
+            "activeClassName": "iconActive"
+          }
+        },
+        {
+          "id": "menu-footer-challenges",
+          "type": "custom",
+          "iconId": "hpa-challenges",
+          "itemProps": {
+            "text": "Desafios"
+          },
+          "iconProps": {
+            "id": "hpa-challenges",
+            "size": 24,
+            "viewBox": "0 0 24 24",
+            "activeClassName": "iconActive"
+          }
+        },
+        {
+          "id": "menu-footer-store",
+          "type": "custom",
+          "iconId": "hpa-cart",
+          "itemProps": {
+            "text": "Loja"
+          },
+          "iconProps": {
+            "id": "hpa-cart",
+            "size": 24,
+            "viewBox": "0 0 24 24",
+            "activeClassName": "iconActive"
+          }
+        },
+        {
+          "id": "menu-footer-support",
+          "type": "custom",
+          "iconId": "hpa-support",
+          "itemProps": {
+            "text": "Suporte"
+          },
+          "iconProps": {
+            "id": "hpa-support",
+            "size": 24,
+            "viewBox": "0 0 24 24",
+            "activeClassName": "iconActive"
+          }
+        }
+      ]
     }
   }
 }
