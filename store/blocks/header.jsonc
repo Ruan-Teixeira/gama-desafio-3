@@ -56,7 +56,7 @@
       "items": [
         {
           "id": "menu-item-promocao",
-          "highlight": false,
+          "highlight": true,
           "itemProps": {
             "text": "Promoção"
           }

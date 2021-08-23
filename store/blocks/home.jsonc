@@ -2,7 +2,25 @@
   // define configurações e blocos para exibição dos produdos da página inicial
   "store.home": {
     "blocks": [
-      "slider-layout#text-test", "flex-layout.row"
+      "slider-layout#text-test", "flex-layout.row", "flex-layout.row#form"
+    ]
+  },
+  "flex-layout.row#form": {
+    "props": {
+    "horizontalAlign": "center",
+      "verticalAlign": "center",
+      "preventHorizontalStretch": true,
+      "preventVerticalStretch": true,
+      "fullWidth": true,
+      "blockClass": "layout-form"
+    },
+    "children": ["newsletter-form#home"]
+  },
+  "newsletter-form#home": {
+    "children": [
+      "newsletter-input-email",
+      "newsletter-input-name",
+      "newsletter-submit"
     ]
   },
 
@@ -94,11 +112,8 @@
     "product-summary.shelf#lp": {
       "children": [
         "product-summary-name",
-        //"product-summary-description",
         "product-summary-image",
         "product-summary-price",
-        //"product-summary-sku-selector",
-        //"product-summary-buy-button"
         "add-to-cart-button"
       ]
     }
