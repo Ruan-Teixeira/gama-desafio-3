@@ -42,16 +42,14 @@
         {
           "id": "menu-footer-login",
           "type": "custom",
-          "iconId": "hpa-login",
+          "iconId": "lp-login",
           "itemProps": {
-            "text": "Login",
-            "type": "internal"
+            "text": "Login"
           },
           "iconProps": {
-            "id": "hpa-login",
+            "id": "lp-login",
             "size": 24,
-            "viewBox": "0 0 24 24",
-            "activeClassName": "iconActive"
+            "viewBox": "0 0 24 24"
           }
         },
         {
@@ -64,8 +62,7 @@
           "iconProps": {
             "id": "hpa-challenges",
             "size": 24,
-            "viewBox": "0 0 24 24",
-            "activeClassName": "iconActive"
+            "viewBox": "0 0 24 24"
           }
         },
         {
@@ -78,8 +75,7 @@
           "iconProps": {
             "id": "hpa-cart",
             "size": 24,
-            "viewBox": "0 0 24 24",
-            "activeClassName": "iconActive"
+            "viewBox": "0 0 24 24"            
           }
         },
         {
@@ -87,13 +83,14 @@
           "type": "custom",
           "iconId": "hpa-support",
           "itemProps": {
-            "text": "Suporte"
+            "text": "Suporte",
+            "href": "https://api.whatsapp.com/send?phone=5574991971007&text=Oi%20sou%20da%20UPMedal%2C%20e%20tenho%20uma%20d%C3%BAvida!",
+            "target": "_blank"
           },
           "iconProps": {
             "id": "hpa-support",
             "size": 24,
-            "viewBox": "0 0 24 24",
-            "activeClassName": "iconActive"
+            "viewBox": "0 0 24 24"
           }
         }
       ]
